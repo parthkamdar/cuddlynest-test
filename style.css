@@ -589,11 +589,6 @@ ul {
 .gm-svpc {
   display: none;
 }
-
-.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
-  left: 0;
-  top: 0;
-}
 .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom .gmnoprint {
   top: 0 !important;
 }
@@ -608,6 +603,18 @@ ul {
 }
 .mobile-nav {
   display: none;
+}
+.gm-style-iw.gm-style-iw-c {
+  max-width: 250px !important;
+}
+.data-item-map .data {
+  padding-top: 20px;
+}
+.data-item-map p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
 }
 /* Mobile Resonponsive */
 @media (min-width: 320px) and (max-width: 480px) {
