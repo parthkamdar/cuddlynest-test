@@ -1,0 +1,970 @@
+* {
+  font-family: "Lato", sans-serif !important;
+}
+html {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Lato", sans-serif !important;
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: white;
+}
+.visible {
+  overflow: visible !important;
+}
+.no-overflow {
+  overflow: hidden !important;
+}
+.show-block {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+.container {
+  overflow: hidden;
+  padding: 0px;
+  width: calc(100%);
+  padding: 0 15px;
+  margin: 0px;
+  /* max-width: 1370px; */
+}
+ul {
+  list-style: none;
+}
+.main-header {
+  width: 100%;
+  padding: 17px 0 0 0;
+  float: left;
+  min-height: 58px;
+}
+.container > .row {
+  margin: 0px;
+}
+.main-header .container,
+.search-row .container,
+.main-content .container {
+  max-width: 1370px;
+}
+.main-header .container .logo {
+  width: max-content;
+  display: inline-flex;
+}
+.main-header .container .logo img {
+  height: 26px;
+}
+.main-header .container .row {
+  margin: 0px;
+  position: relative;
+}
+.main-header .container .main-nav {
+  width: max-content;
+  display: inline-flex;
+  padding-left: 50px;
+}
+.main-header .container .main-nav ul,
+.main-header .container .second-nav ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.main-header .container .main-nav li,
+.main-header .container .second-nav li {
+  display: inline-flex;
+}
+.main-header .container .second-nav li i.bottom-arrow {
+  background: url("https://www.cuddlynest.com/images/hpv2_homeicons/menuarrow_color.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 7px;
+  vertical-align: top;
+  margin-top: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.second-nav .currency {
+  position: relative;
+}
+.second-nav .currency-dropdown {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2px 5px 5px 5px;
+  position: absolute;
+  padding: 15px 20px !important;
+  top: 22px;
+  margin: 0;
+  min-width: 150px;
+  width: 267px;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 10ms;
+}
+.second-nav .currency-dropdown.hide {
+  display: none;
+}
+.second-nav .currency-dropdown.show {
+  display: block;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0.3s;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9;
+}
+.second-nav .currency-dropdown.show li {
+  width: -webkit-fill-available;
+  margin: 0px;
+  margin-bottom: 7px;
+}
+.second-nav .currency-dropdown.show li:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+.second-nav .currency-dropdown.show li.selected {
+  font-weight: 600;
+  background-image: url("https://www.cuddlynest.com/images/hpv2_homeicons/currency_slct.png");
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 15px auto;
+}
+.second-nav .currency-dropdown.show .other {
+  max-height: 140px;
+  overflow-y: scroll;
+}
+.second-nav .currency-dropdown.show ::-webkit-scrollbar {
+  width: 2px;
+}
+/* Track */
+.second-nav .currency-dropdown.show ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2px;
+}
+.second-nav .currency-dropdown.show ::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.main-nav li a {
+  padding: 9px 0 20px 0;
+  margin-right: 30px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #242526;
+  font-weight: 700;
+}
+.main-nav li a.active,
+.main-nav li a:hover {
+  color: #e56399;
+  border: none;
+  border-bottom: 3px solid #e56399;
+  background: 0 0;
+  text-decoration: none;
+}
+.main-header .container .second-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.second-nav li {
+  margin: 8px 12px;
+}
+.second-nav li a {
+  color: #242526;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0;
+  line-height: 18px;
+  overflow: hidden;
+}
+.second-nav li a:hover {
+  font-weight: 600;
+}
+.second-nav li a.property {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #574b90;
+  padding-right: 0;
+}
+.search-row {
+  width: 100%;
+}
+.search-row .container > .row {
+  padding: 14px 0;
+  border-top: 1px solid #dcdadc;
+  border-bottom: 1px solid #dcdadc;
+  float: left;
+  width: 100%;
+}
+.search-row .container ul {
+  margin-bottom: 0px;
+  padding: 0px;
+  /* overflow: visible; */
+}
+.search-row .container form input {
+  border: 1px solid #dcdadc;
+  color: #242526;
+  border-radius: 2px;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 600;
+  width: 100%;
+  height: 38px;
+}
+.search-row .container form ul {
+  display: inline-flex;
+}
+.search-row .container form li {
+  position: relative;
+}
+.search-row .container form .city-search-item::after {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  content: "";
+}
+.search-row .container form input.city-search {
+  width: 311px;
+  padding-left: 34px;
+}
+.search-row .container form .date-input-item {
+  max-width: 320px;
+  margin-left: 20px;
+}
+.search-row .container form .date-input-item .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+}
+.search-row .container form .date-input-item .row .arrow {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/cinout_arrow.svg");
+  background-size: 16px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 10px;
+  width: 14px;
+  margin-left: -15px;
+  margin-top: -4px;
+}
+.search-row .container form .date-input-item .col-sm-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.search-row .container form .date-input-item .col-sm-6 input {
+  padding-left: 22px;
+}
+.search-row .container form .date-input-item .col-sm-6 .date-in {
+  border-right: none;
+}
+.search-row .container form .date-input-item .col-sm-6 .date-out {
+  border-left: none;
+  margin-left: -1px;
+}
+.search-row .container form .guest-input-item {
+  width: 137px;
+  position: relative;
+  margin-left: 20px;
+}
+.search-row .container form .guest-input-item span {
+  position: absolute;
+  padding: 0 10px;
+  top: 44%;
+  transform: translateY(-50%);
+}
+.search-row .container form .guest-input-item span.minus-btn {
+  left: 1px;
+}
+.search-row .container form .guest-input-item span.plus-btn {
+  right: 1px;
+}
+.search-row .container form .guest-input-item .guests {
+  text-align: center;
+}
+.search-row .container form .filters-item {
+  position: relative;
+  margin-left: 20px;
+  width: 124px;
+}
+.search-row .container form .filters-item .filters-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #242526;
+  border: 1px solid #dcdadc;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 38px;
+  display: inline-block;
+  padding: 10px 15px;
+  width: 124px;
+}
+.search-row .container form .filters-item .bottom-arrow {
+  position: absolute;
+  top: 33%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 12px;
+  height: 7px;
+  float: right;
+  margin: 5px 0 0 0;
+}
+.search-row .container .toggle-filter-options.hide {
+  display: none;
+}
+.search-row .container .toggle-filter-options.show {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 466px;
+  background: #fcfcfc;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 7px 0 0;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  z-index: 3;
+  height: 400px;
+}
+.toggle-filter-options.show > .row {
+  width: 100%;
+  margin: 0px;
+}
+.toggle-filter-options.show h6 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #242526;
+  margin: 5px 0;
+  padding: 0 0 0 15px;
+}
+.toggle-filter-options.show .row ul {
+  width: 100%;
+  display: block;
+}
+.toggle-filter-options.show .row ul li {
+  width: 100%;
+  padding: 0 15px 16px;
+}
+.toggle-filter-options.show #slider-range {
+  margin-top: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.toggle-filter-options.show #slider-range.ui-slider {
+  background: #d5cebc;
+}
+.toggle-filter-options.show #slider-range.ui-slider.ui-slider-horizontal {
+  height: 2px;
+  border: none;
+}
+.toggle-filter-options.show .ui-slider-horizontal .ui-slider-range {
+  height: 100%;
+}
+.toggle-filter-options.show #slider-range .ui-slider-range {
+  background-color: #574b90;
+  background-image: none;
+}
+.toggle-filter-options.show
+  #slider-range.ui-slider.ui-slider-horizontal
+  .ui-slider-handle {
+  top: -6px;
+  margin-left: -6px;
+}
+.toggle-filter-options.show #slider-range.ui-slider .ui-slider-handle {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #574b90;
+  background-image: none;
+  border: 1px solid #fcfcfc !important;
+}
+.toggle-filter-options.show .currency-limit #max {
+  float: right;
+}
+.toggle-filter-options.show .star-item-row {
+  margin-top: 5px;
+}
+.toggle-filter-options.show .star-item-row label {
+  width: 49%;
+  margin-bottom: 9px;
+  display: inline-flex;
+}
+.toggle-filter-options.show .star-item-row input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.toggle-filter-options.show
+  .star-item-row
+  input[type="checkbox"].text-checkbox {
+  margin-top: 8px;
+}
+.toggle-filter-options.show .star-item-row span {
+  margin-left: 5px;
+}
+.toggle-filter-options.show .star-item-row i {
+  background-image: url("https://www.cuddlynest.com/images/rating_stars/no-rating_star.svg");
+  margin-left: 5px;
+  height: 12px;
+  background-size: auto 12px;
+  background-position: top left;
+  background-repeat: repeat-x;
+  display: inline-block;
+}
+.toggle-filter-options.show .star-item-row i.five-star {
+  width: 80px;
+}
+.toggle-filter-options.show .star-item-row i.four-star {
+  width: 65px;
+}
+.toggle-filter-options.show .star-item-row i.three-star {
+  width: 50px;
+}
+.toggle-filter-options.show .star-item-row i.two-star {
+  width: 33px;
+}
+.toggle-filter-options.show .star-item-row i.one-star {
+  width: 16px;
+}
+.toggle-filter-options.show .btn-row {
+  padding: 10px 15px;
+}
+.toggle-filter-options.show .btn-row a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #242526;
+  opacity: 1;
+}
+.toggle-filter-options.show .btn-row .save {
+  font-weight: 700;
+  color: #e56399;
+  float: right;
+}
+.toggle-filter-options.show .btn-row .close {
+  float: left;
+}
+.toggle-filter-options.show .btn-row .clear {
+  float: left;
+  display: none;
+}
+.main-content .container .col-md-7,
+.main-content .container .col-md-5 {
+  padding: 0px;
+}
+.main-content .container .col-md-7 {
+  padding-top: 30px;
+  padding-right: 15px;
+  min-height: auto;
+  height: calc(100vh - 142px);
+  overflow-y: scroll;
+  padding-bottom: 30px;
+}
+.main-content .data-item-row {
+  margin: 0px;
+}
+.main-content .data-item-row .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: calc(50% -5px);
+}
+.main-content .data-item-row .col-md-6.left {
+  padding-right: 5px;
+  padding-left: 1px;
+}
+.main-content .data-item-row .col-md-6.right {
+  padding-left: 5px;
+}
+.main-content .data-item-row .data-item {
+  float: left;
+  width: 100%;
+  border: 1px solid #dcdadc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.main-content .data-item-row .data-item .bookmark-outer {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: 99;
+  border-radius: 24px;
+  background: #fff;
+  right: 19px;
+  top: 18px;
+}
+.main-content .data-item-row .data-item .bookmark-outer i {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/fav.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+}
+.main-content .data-item-row .data-item:hover {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.main-content .data-item-row .data {
+  padding: 11px 14px;
+}
+.main-content .data-item-row .data p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.main-content .data-item-row .data .col-sm-12 span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #b3b1b4;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.main-content .data-item-row .data-item:hover .col-sm-12 span {
+  color: #574b90;
+}
+.main-content .data-item-row .data .col-sm-12 .ratings-star {
+  background-image: url("https://www.cuddlynest.com/images/rating_stars/no-rating_star.svg");
+  height: 14px;
+  background-size: auto 13px;
+  background-position: top left;
+  background-repeat: repeat-x;
+  width: 54px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+.main-content .data-item-row .data-item:hover .col-sm-12 .ratings-star {
+  background-image: url("https://www.cuddlynest.com/images/rating_stars/rating_star.svg");
+}
+
+.main-content .container .pagination {
+  padding: 10px;
+}
+.main-content .container .pagination-next {
+  background-size: 9px;
+  background: #fcfcfc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: auto;
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/next_page.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main-content .container #map {
+  width: 100%;
+  height: calc(100vh - 142px);
+}
+/* MAP STYLING */
+.gm-style-mtc {
+  display: none;
+}
+.gm-svpc {
+  display: none;
+}
+
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+  left: 0;
+  top: 0;
+}
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom .gmnoprint {
+  top: 0 !important;
+}
+.search-row .mobile {
+  display: none;
+}
+.filters-mobile {
+  display: none;
+}
+.mobile-footer {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+/* Mobile Resonponsive */
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    height: auto;
+    overflow: visible;
+    font-family: "Lato", sans-serif !important;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .main-header .container .logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main-header .container .logo img {
+    height: 35px;
+  }
+  .main-header .container .main-nav {
+    padding-left: 0px;
+  }
+  .main-header .mobile-nav {
+    display: inline-flex;
+  }
+  .main-header .mobile-nav #menu {
+    position: absolute;
+    top: 5;
+    right: 10px;
+  }
+  .main-header .mobile-nav #menu img {
+    width: 25px;
+    height: auto;
+  }
+  .mobile-menu {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 20px;
+  }
+  .mobile-menu > .row {
+    position: relative;
+  }
+  .mobile-menu #close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 20px;
+    width: auto;
+  }
+  .mobile-menu #close img {
+    height: 15px;
+    width: auto;
+  }
+  .mobile-menu ul {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 200px;
+    width: 100%;
+  }
+  .mobile-menu ul li {
+    padding: 5px 0;
+  }
+  .mobile-menu ul li.divider {
+    background-color: #bdbdbd;
+    height: 2px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+  }
+  .mobile-menu ul li.currency a {
+    display: inline;
+  }
+  .mobile-menu ul li.currency .bottom-arrow-mobile {
+    float: right;
+  }
+  .mobile-menu ul li a {
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #242526;
+  }
+  .mobile-menu ul li a.property {
+    padding-top: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+  .second-nav {
+    display: none;
+  }
+  .search-row .container > .row {
+    border: none;
+  }
+  .search-row .desktop {
+    display: none;
+  }
+  .search-row .container > .row.mobile form,
+  .search-row .container > .row.mobile form ul,
+  .search-row .row.mobile .city-search-item {
+    width: 100%;
+  }
+  .search-row .container > .row.mobile form ul {
+    display: block;
+  }
+  .search-row .container > .row.mobile form ul li {
+    margin-bottom: 10px;
+  }
+  .search-row .row.mobile .city-search-item .city-search {
+    width: 100%;
+  }
+  .search-row .row.mobile .date-input-item {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .search-row .row.mobile .date-input-item > .row {
+    padding-right: 25px;
+  }
+  .search-row .row.mobile .date-input-item .col-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .search-row .row.mobile .date-input-item .col-6 .date-in {
+    padding-left: 5px;
+    border-right: none;
+  }
+  .search-row .row.mobile .date-input-item .col-6 .date-out {
+    border-left: none;
+    padding-left: 5px;
+  }
+  .search-row .row.mobile .guest-input-item {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+  }
+  /* .search-row .container form,
+  .search-row .container form ul {
+    width: 100%;
+  }
+  .search-row .container form ul {
+    display: inline-block;
+  }
+  .search-row .container form ul .room,
+  .search-row .container form ul .filters-item {
+    display: none;
+  }
+  .search-row .container form li.city-search-item {
+    width: 100%;
+  }
+  .search-row .container form input.city-search {
+    width: 100%;
+  }
+  .search-row .container form ul .date-input-item {
+    width: 65%;
+    margin-left: 0px;
+  }
+  .search-row .container form ul .date-input-item .col-sm-6 {
+    width: 49%;
+  }
+  .search-row .container form .date-input-item .col-sm-6 input {
+    padding-left: 5px;
+  }
+  .search-row .container form .date-input-item .row .arrow {
+    left: 48%;
+  } */
+  .main-content .container .col-md-7 {
+    padding-top: 10px;
+    padding-right: 0px;
+    height: auto;
+    padding-bottom: 70px;
+  }
+  .main-content .data-item .data .col-sm-8 {
+    padding: 0px;
+    width: 100%;
+  }
+  .main-content .data-item .data {
+    position: relative;
+    padding-bottom: 60px;
+    padding-top: 15px;
+  }
+  .main-content .data-item .data .col-sm-4 {
+    width: max-content;
+    padding: 0px;
+    position: absolute;
+    right: 11px;
+    top: 50px;
+  }
+  .main-content .data-item .data .col-sm-12 {
+    width: max-content;
+    padding: 0px;
+    position: absolute;
+    left: 14px;
+    top: 55px;
+  }
+  .col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .map-main {
+    display: none;
+  }
+  .mobile-footer {
+    display: inline-flex;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    z-index: 11;
+    text-align: center;
+  }
+  .mobile-footer .col-6 {
+    padding: 0px;
+  }
+  .mobile-footer .col-6 a {
+    background: #fff;
+    float: left;
+    margin: 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #242526;
+    line-height: 19px;
+    padding: 16px 20px 15px;
+    text-decoration: none;
+  }
+  .mobile-footer .col-6 a.active {
+    background: #dcdadc;
+  }
+  .filters-mobile {
+    padding-bottom: 0px;
+  }
+  .filters-mobile .toggle-filter-options.show ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .toggle-filter-options.show #slider-range-mobile {
+    margin-top: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .toggle-filter-options.show #slider-range-mobile.ui-slider {
+    background: #d5cebc;
+  }
+  .toggle-filter-options.show
+    #slider-range-mobile.ui-slider.ui-slider-horizontal {
+    height: 2px;
+    border: none;
+  }
+  .toggle-filter-options.show .ui-slider-horizontal .ui-slider-range {
+    height: 100%;
+  }
+  .toggle-filter-options.show #slider-range-mobile .ui-slider-range {
+    background-color: #574b90;
+    background-image: none;
+  }
+  .toggle-filter-options.show
+    #slider-range-mobile.ui-slider.ui-slider-horizontal
+    .ui-slider-handle {
+    top: -6px;
+    margin-left: -6px;
+  }
+  .toggle-filter-options.show #slider-range-mobile.ui-slider .ui-slider-handle {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #574b90;
+    background-image: none;
+    border: 1px solid #fcfcfc !important;
+  }
+  .toggle-filter-options.show .star-item-row input[type="checkbox"],
+  .toggle-filter-options.show
+    .star-item-row
+    input[type="checkbox"].text-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .toggle-filter-options.show .star-item-row label {
+    width: 100%;
+  }
+  .toggle-filter-options.show h6 {
+    margin-bottom: 20px;
+  }
+  .toggle-filter-options.show .star-item-row i,
+  .toggle-filter-options.show .star-item-row span {
+    margin-top: 5px;
+  }
+  .toggle-filter-options.show .btn-row .save-mobile {
+    font-weight: 700;
+    color: #e56399;
+    float: right;
+  }
+  .toggle-filter-options.show .btn-row .close-mobile {
+    float: left;
+  }
+  .toggle-filter-options.show .btn-row .clear-mobile {
+    float: left;
+    display: none;
+  }
+  .toggle-filter-options.show .currency-limit #max-mobile {
+    float: right;
+  }
+  .currency-dropdown-mobile-container.show-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background-color: white;
+    z-index: 100;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .currency-dropdown-mobile-container.show-block h6 {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #242526;
+  }
+  .currency-dropdown-mobile-container.show-block ul {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .currency-dropdown-mobile-container.show-block ul li.selected {
+    font-weight: 600;
+    background-image: url("https://www.cuddlynest.com/images/hpv2_homeicons/currency_slct.png");
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+  }
+  .currency-dropdown-mobile-container.show-block ul hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .currency-dropdown-mobile-container.show-block ul.other {
+    margin-top: 0px;
+    padding-bottom: 20px;
+  }
+}
