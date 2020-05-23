@@ -99,6 +99,12 @@ $(function () {
 });
 let showMobileMap = false;
 document.querySelector("#show-map-btn").addEventListener("click", () => {
+  if (showMobileFilters) {
+    showMobileFilters = false;
+    document.querySelector(".main-data").classList.remove("hide");
+    document.querySelector(".filters-mobile").classList.remove("show-block");
+    document.querySelector(".mobile-footer").classList.remove("hide");
+  }
   if (!showMobileMap) {
     showMobileMap = true;
     document.querySelector(".main-data").classList.add("hide");
@@ -115,6 +121,12 @@ document.querySelector("#show-map-btn").addEventListener("click", () => {
 });
 let showMobileFilters = false;
 document.querySelector("#show-filters-btn").addEventListener("click", () => {
+  if (showMobileMap) {
+    document.querySelector(".main-data").classList.remove("hide");
+    document.querySelector(".map-main").classList.remove("show-block");
+    document.querySelector("#show-map-btn").classList.remove("active");
+    document.querySelector("#show-map-btn").innerHTML = "Show map";
+  }
   if (!showMobileFilters) {
     showMobileFilters = true;
     document.querySelector(".main-data").classList.add("hide");
