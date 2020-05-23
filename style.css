@@ -311,7 +311,7 @@ ul {
 }
 .search-row .container form .filters-item .bottom-arrow {
   position: absolute;
-  top: 33%;
+  top: 41%;
   right: 10px;
   transform: translateY(-50%);
   background-image: url("https://www.cuddlynest.com/images/sv2_icons/arrow_down.svg");

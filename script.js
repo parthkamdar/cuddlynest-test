@@ -19,6 +19,7 @@ currencyDropDown.addEventListener("click", () => {
   document.querySelector(".main-header .container").classList.remove("visible");
 });
 let filterBtn = document.querySelector(".filters-btn");
+let arrow = document.querySelector(".filters-btn-arrow");
 let saveBtn = document.querySelector(".toggle-filter-options .btn-row .save");
 let closeBtn = document.querySelector(".toggle-filter-options .btn-row .close");
 let dropDown = document.querySelector(".toggle-filter-options");
@@ -29,6 +30,8 @@ filterBtn.addEventListener("click", () => {
     dropDown.classList.remove("hide");
     dropDown.classList.add("show");
     document.querySelector(".search-row .container").classList.add("visible");
+    arrow.style.transform = "translateY(-50%) rotate(180deg)";
+    // arrow.style.top = "27%";
   } else {
     fitlerDropDownFlag = false;
     dropDown.classList.add("hide");
@@ -36,6 +39,8 @@ filterBtn.addEventListener("click", () => {
     document
       .querySelector(".search-row .container")
       .classList.remove("visible");
+    arrow.style.transform = "translateY(-50%) rotate(0deg)";
+    // arrow.style.top = "41%";
   }
 });
 saveBtn.addEventListener("click", () => {
@@ -43,12 +48,16 @@ saveBtn.addEventListener("click", () => {
   dropDown.classList.add("hide");
   dropDown.classList.remove("show");
   document.querySelector(".search-row .container").classList.remove("visible");
+  arrow.style.transform = "translateY(-50%) rotate(0deg)";
+  //   arrow.style.top = "41%";
 });
 closeBtn.addEventListener("click", () => {
   fitlerDropDownFlag = false;
   dropDown.classList.add("hide");
   dropDown.classList.remove("show");
   document.querySelector(".search-row .container").classList.remove("visible");
+  arrow.style.transform = "translateY(-50%) rotate(0deg)";
+  //   arrow.style.top = "41%";
 });
 $(function () {
   $("#slider-range").slider({
