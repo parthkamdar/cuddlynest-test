@@ -506,7 +506,7 @@ ul {
   width: 24px;
   height: 24px;
   position: absolute;
-  z-index: 99;
+  z-index: 1;
   border-radius: 24px;
   background: #fff;
   right: 19px;
