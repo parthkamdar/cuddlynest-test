@@ -2,6 +2,7 @@
   font-family: "Lato", sans-serif !important;
 }
 html {
+  scroll-behavior: smooth;
   height: 100vh;
   overflow: hidden;
   font-family: "Lato", sans-serif !important;
@@ -32,6 +33,10 @@ body {
   margin: 0px;
   /* max-width: 1370px; */
 }
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 ul {
   list-style: none;
 }
@@ -40,6 +45,7 @@ ul {
   padding: 17px 0 0 0;
   float: left;
   min-height: 58px;
+  z-index: 9999;
 }
 .container > .row {
   margin: 0px;
@@ -620,6 +626,33 @@ ul {
 }
 
 /* Property Details Page  */
+.city-search-item {
+  width: 300px;
+}
+.city-search-item input {
+  border: 1px solid #dcdadc;
+  color: #242526;
+  border-radius: 2px;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 600;
+  width: 100%;
+  height: 38px;
+  position: relative;
+  padding-left: 30px;
+}
+.city-search-item::after {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 12px;
+  content: "";
+  margin-left: 10px;
+}
 .image-grid {
   position: relative;
 }
@@ -713,6 +746,42 @@ ul {
   margin: -2px 4px 0 6px;
   background-size: 13px auto;
 }
+.property-details-wrapper .container .share-div {
+  position: relative;
+}
+.property-details-wrapper .container .share-div .share-dropdown {
+  display: none;
+}
+.property-details-wrapper .container .share-div .share-dropdown.show {
+  display: block !important;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  z-index: 99;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 20px 30px;
+}
+.property-details-wrapper .container .share-div .share-dropdown.show ul {
+  padding-left: 0px;
+}
+.property-details-wrapper .container .share-div .share-dropdown.show ul li {
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 14px;
+  float: left;
+  line-height: 37px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.property-details-wrapper .container .share-div .share-dropdown.show ul a {
+  color: #242526;
+  display: block;
+}
 .property-details-wrapper .hotel-rating {
   font-weight: 500;
   font-size: 14px;
@@ -741,11 +810,20 @@ ul {
   margin: 20px 0;
   width: 100%;
 }
+.property-details-wrapper .inner-menu-wrapper.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  margin: 0px;
+  padding: 20px 15px;
+  z-index: 9999;
+}
 .property-details-wrapper .inner-menu {
   display: inline-flex;
   padding-left: 0px;
 }
-.property-details-wrapper .inner-menu-item {
+.property-details-wrapper .inner-menu-item a {
   float: left;
   margin: 0 18px 0 0;
   position: relative;
@@ -756,7 +834,7 @@ ul {
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 }
-.property-details-wrapper .inner-menu-item.active {
+.property-details-wrapper .inner-menu-item.active a {
   text-decoration: none;
   border-bottom: 2px solid #e56399;
   font-weight: 500;
@@ -912,6 +990,9 @@ ul {
 #select-room-div .table thead th {
   padding-left: 0px;
 }
+#select-room-div .table tbody tr.part-2 {
+  display: none;
+}
 #select-room-div .table1 {
   width: 320px !important;
 }
@@ -946,7 +1027,7 @@ ul {
 #select-room-div table .price {
   width: 300px;
 }
-#select-room-div .show-more-less {
+.show-more-less {
   font-size: 18px;
   line-height: 22px;
   color: #242526;
@@ -956,7 +1037,7 @@ ul {
   padding-left: 340px;
   padding-bottom: 20px;
 }
-#select-room-div .show-more-less span.arrow {
+.show-more-less span.arrow {
   background: url("https://www.cuddlynest.com/images/sv2_icons/arrow_down.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -966,12 +1047,16 @@ ul {
   margin-right: 10px;
   vertical-align: bottom;
 }
-#location-div {
+#location-div,
+#description-div,
+#accommodations-div {
   float: left;
   width: 100%;
   margin: 42px 0 0;
 }
-#location-div > h3 {
+#location-div > h3,
+#description-div > h3,
+#accommodations-div > h3 {
   margin: 0 0 20px;
   padding: 0;
   font-weight: 500;
@@ -987,6 +1072,147 @@ ul {
   line-height: 22px;
   color: #000;
 }
+#location-div #map {
+  width: 100%;
+  height: 643px;
+}
+#description-div > p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #242526;
+  width: 100%;
+}
+#description-div > .col-8 {
+  padding: 0px;
+}
+#desciption-div > .col-8 > p {
+  font-size: 18px;
+  line-height: 22px;
+  color: #242526;
+  word-break: break-word;
+}
+#accommodations-div ul {
+  padding-left: 0px;
+}
+#accommodations-div ul li {
+  font-weight: 400;
+  width: 100%;
+  font-size: 18px;
+  line-height: 27px;
+  color: #242526;
+  margin-bottom: 0;
+}
+footer {
+  width: 100%;
+  min-height: 340px;
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 400;
+  background: #242526;
+  float: left;
+  width: 100%;
+}
+footer .container {
+  padding: 42px 0;
+  max-width: 1370px;
+}
+footer .tagline {
+  font-family: Merriweather, serif !important;
+  color: #fcfcfc;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 53px;
+  letter-spacing: 0.02em;
+}
+footer .tagline em {
+  color: #f35597;
+}
+footer .social-icons {
+  display: inline-flex;
+  padding-left: 0px;
+  margin-top: 60px;
+}
+footer .social-icons li {
+  margin-right: 30px;
+}
+footer .footer-links {
+  padding-left: 0px;
+}
+footer .footer-links li {
+  margin-bottom: 9px;
+}
+footer .footer-links li a {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fcfcfc;
+}
+footer .copyright-div {
+  display: inline-block;
+  margin-top: 100px !important;
+  padding-top: 50px;
+  border-top: 2px solid #555758;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+footer .copyright-div small {
+  color: white;
+}
+footer .copyright-div .float-right span {
+  background: url("https://www.cuddlynest.com/images/footer/vrma.svg");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 35px;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+}
+.carousel-div {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: black;
+}
+.carousel-div.show {
+  display: block !important;
+}
+.carousel-div .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+}
+.carousel-div .close img {
+  width: 20px;
+  height: 20px;
+}
+.carousel-div .carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.carousel-div .carousel img {
+  display: block;
+  margin: auto;
+  width: 500px;
+  height: auto;
+}
+@media (min-width: 700px) {
+  .mobile {
+    display: none;
+  }
+}
+
 /* Mobile Resonponsive */
 @media (min-width: 320px) and (max-width: 480px) {
   html {
@@ -1015,6 +1241,7 @@ ul {
     position: absolute;
     top: 5;
     right: 10px;
+    z-index: 1;
   }
   .main-header .mobile-nav #menu img {
     width: 25px;
@@ -1344,5 +1571,306 @@ ul {
   .currency-dropdown-mobile-container.show-block ul.other {
     margin-top: 0px;
     padding-bottom: 20px;
+  }
+  /* Property Details Page  */
+  .property-details .main-nav {
+    display: none !important;
+  }
+  .image-grid .container {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .image-grid .row.mobile {
+    margin-top: 0px;
+  }
+  .image-grid .row.mobile .carousel {
+    width: 100%;
+    height: 236px;
+  }
+  .image-grid .row.mobile .carousel img {
+    width: 100%;
+    height: 236px;
+  }
+  .image-grid .row.mobile .carousel-indicators {
+    margin-bottom: 5px;
+  }
+  .image-grid .row.mobile .carousel-indicators li {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+  .image-grid .row.desktop {
+    display: none;
+  }
+  .property-details-wrapper .container .save-wishlist-btn,
+  .property-details-wrapper .container .share-div {
+    display: none;
+  }
+  .image-grid .row.mobile .bookmark-outer,
+  .image-grid .row.mobile .share-outer {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 24px;
+    background: #fff;
+    right: 19px;
+    top: 85px;
+  }
+  .image-grid .row.mobile .bookmark-outer .bookmark-img {
+    background-image: url("https://www.cuddlynest.com/images/sv2_icons/fav.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+  }
+  .image-grid .row.mobile .share-outer .share-img {
+    background-image: url("https://www.cuddlynest.com/images/sv2_icons/share_icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+  }
+  .image-grid .row.mobile .share-outer {
+    right: 60px;
+  }
+  .property-details-wrapper .inner-menu-wrapper {
+    display: none;
+  }
+  .inner-menu-wrapper-mobile {
+    padding-top: 20px !important;
+    width: 100%;
+  }
+  .inner-menu-wrapper-mobile .dropdown {
+    width: 100%;
+  }
+  .inner-menu-wrapper-mobile .dropdown-toggle {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 2px;
+    border: 1px solid #dcdadc;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  .inner-menu-wrapper-mobile .dropdown-toggle::after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+  }
+  .inner-menu-wrapper-mobile .dropdown-menu {
+    width: 100%;
+    padding: 10px;
+  }
+  .inner-menu-wrapper-mobile .dropdown-menu a {
+    display: block;
+    color: black;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+  .property-details-wrapper .search-row {
+    border: none;
+  }
+  .property-details-wrapper .search-row .date-input-item {
+    width: 70%;
+  }
+  .property-details-wrapper .search-row .date-input-item .col-sm-6 {
+    width: 50%;
+  }
+  .property-details-wrapper .search-row .date-input-item .row .arrow {
+    left: 52%;
+  }
+  #select-room-div {
+    display: none;
+  }
+  #select-room-div.mobile {
+    display: inline-flex;
+    margin-top: 20px;
+    border: none;
+    padding: 0px;
+  }
+  #select-room-div.mobile > .row {
+    width: 100%;
+  }
+  #select-room-div.mobile h3 {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+  }
+  #select-room-div.mobile .room-item-small {
+    width: 100%;
+    border-top: 1px solid #dcdadc;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  #select-room-div.mobile .room-item-small .col-1,
+  #select-room-div.mobile .room-item-small .col-5,
+  #select-room-div.mobile .room-item-small .col-6 {
+    padding: 0px;
+  }
+  #select-room-div.mobile .room-item-small p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  #select-room-div.mobile .room-item-small .col-1 a {
+    background-image: url("https://www.cuddlynest.com/images/ldv2_images/down_arrow.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 15px;
+    width: 15px;
+    height: 100%;
+    display: block;
+  }
+  #select-room-div.mobile .room-item-big {
+    padding-top: 10px;
+    border-top: 1px solid #dcdadc;
+  }
+  #select-room-div.mobile .room-item-big .room-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 8px;
+    min-height: 18px;
+    width: 100%;
+  }
+  #select-room-div.mobile .room-item-big .room-title.up {
+    background-image: url("https://www.cuddlynest.com/images/ldv2_images/up_arrow.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    margin-right: 15px;
+  }
+  #select-room-div.mobile .room-item-big .room-img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #select-room-div.mobile .room-item-big ul {
+    padding-left: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #select-room-div.mobile .room-item-big .room-price {
+    width: 100%;
+  }
+  #select-room-div.mobile .room-item-big .room-price .big {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  #select-room-div.mobile .room-item-big .room-price .big sup {
+    font-size: 16px;
+    bottom: 0;
+    top: 0;
+    padding-left: 5px;
+    line-height: 35px;
+  }
+  #select-room-div.mobile .room-item-big .room-price .small {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #242526;
+    text-align: right;
+    width: 50%;
+    float: right;
+    margin: 15px 0 0 0;
+  }
+  .property-details-wrapper .mobile-booking-div.show {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+  .property-details-wrapper .mobile-booking-div.show {
+    display: block;
+  }
+  .property-details-wrapper .mobile-booking-div .book-room-btn {
+    background: #f96d9c;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px !important;
+    font-weight: 500;
+    padding: 8px 20px;
+    text-align: center;
+    width: auto;
+    border-radius: 2px;
+    line-height: 22px;
+    font-size: 18px;
+    width: 100%;
+  }
+  .property-details-wrapper .mobile-booking-div .col-7,
+  .property-details-wrapper .mobile-booking-div .col-4,
+  .property-details-wrapper .mobile-booking-div .col-1 {
+    padding: 0px;
+  }
+  .property-details-wrapper .mobile-booking-div .data p {
+    font-size: 16px;
+    word-wrap: break-word;
+    padding-top: 20px;
+    margin-bottom: 0px;
+  }
+  .property-details-wrapper .mobile-booking-div .help-icon {
+    width: 60%;
+    height: auto;
+    margin-top: 40px;
+  }
+  #description-div > .col-8 {
+    flex: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  #accommodations-div div {
+    font-size: 14px;
+  }
+  #accommodations-div .col-2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  #accommodations-div .col-8 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  footer .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  footer .col-3 {
+    margin-top: 20px;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  footer .copyright-div {
+    margin-top: 30px !important;
+    padding-top: 20px;
+  }
+  footer .copyright-div small {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  footer .copyright-div .float-right {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  footer .copyright-div .float-right span {
+    display: block;
+    margin: auto;
+    width: 70px;
+    background-size: 70px;
+    margin-top: 10px !important;
   }
 }

@@ -1,9 +1,159 @@
+// Property Details Page
+let seeAllBtn = document.querySelector(".see-all-btn");
+let seeAllCloseBtn = document.querySelector(".carousel-div .close");
+seeAllBtn.addEventListener("click", () => {
+  document.querySelector(".carousel-div").classList.add("show");
+  document.documentElement.style.overflow = "hidden";
+});
+seeAllCloseBtn.addEventListener("click", () => {
+  document.querySelector(".carousel-div").classList.remove("show");
+  document.documentElement.style.overflowY = "scroll";
+});
+let innerMenu = $(".inner-menu-wrapper");
+let innerMenuPosition = innerMenu.position().top;
+let isInnerMenuSticky = false;
+let currentScroll = window.scrollY;
+if (currentScroll == innerMenuPosition || currentScroll > innerMenuPosition) {
+  if (!isInnerMenuSticky) {
+    innerMenu.addClass("sticky");
+    isInnerMenuSticky = true;
+  }
+}
+window.onscroll = function (e) {
+  currentScroll = window.scrollY;
+  if (currentScroll == innerMenuPosition || currentScroll > innerMenuPosition) {
+    if (!isInnerMenuSticky) {
+      innerMenu.addClass("sticky");
+      isInnerMenuSticky = true;
+    }
+  } else {
+    if (isInnerMenuSticky) {
+      innerMenu.removeClass("sticky");
+      isInnerMenuSticky = false;
+    }
+  }
+};
+let showMoreBtn1 = document.querySelector("#select-room-div .show-more-less");
+let showMoreBtn1Flag = false;
+showMoreBtn1.addEventListener("click", () => {
+  if (!showMoreBtn1Flag) {
+    $(".part-2").slideDown("fast");
+    $("#select-room-div .show-more-less").html(
+      '<span class="arrow"></span>Show less'
+    );
+    $("#select-room-div .show-more-less .arrow").css(
+      "transform",
+      "rotate(180deg)"
+    );
+    showMoreBtn1Flag = true;
+  } else {
+    $(".part-2").slideUp("slow");
+    $("#select-room-div .show-more-less").html(
+      '<span class="arrow"></span>Show more'
+    );
+    showMoreBtn1Flag = false;
+  }
+});
+let shareBtn = document.querySelector(".share-btn");
+let shareBtnFlag = false;
+shareBtn.addEventListener("click", () => {
+  if (!shareBtnFlag) {
+    document.querySelector(".share-dropdown").classList.add("show");
+    shareBtnFlag = true;
+  } else {
+    document.querySelector(".share-dropdown").classList.remove("show");
+    shareBtnFlag = false;
+  }
+});
+let shareDropDownElements = document.querySelectorAll(".share-dropdown li");
+shareDropDownElements.forEach((element) => {
+  element.addEventListener("click", () => {
+    document.querySelector(".share-dropdown").classList.remove("show");
+    shareBtnFlag = false;
+  });
+});
+var smallDes = document.querySelectorAll(".room-item-small");
+var bigDes = document.querySelectorAll(".room-item-big .up");
+var showDesFlag = false;
+let desId, smallClass, bigClass;
+smallDes.forEach((smallD) => {
+  smallD.addEventListener("click", () => {
+    desId = smallD.classList[2];
+    smallClass = ".small-" + desId;
+    bigClass = ".big-" + desId;
+    if (!showDesFlag) {
+      document.querySelector(smallClass).classList.add("hide");
+      document.querySelector(bigClass).classList.remove("hide");
+      document.querySelector(".mobile-booking-div").classList.remove("hide");
+      document.querySelector(".mobile-booking-div").classList.add("show");
+      showDesFlag = true;
+    } else {
+      document.querySelector(smallClass).classList.remove("hide");
+      document.querySelector(bigClass).classList.add("hide");
+      document.querySelector(".mobile-booking-div").classList.add("hide");
+      document.querySelector(".mobile-booking-div").classList.remove("show");
+      showDesFlag = false;
+    }
+  });
+});
+bigDes.forEach((bigD) => {
+  // console.log(bigD.classList);
+  bigD.addEventListener("click", () => {
+    if (showDesFlag) {
+      document.querySelector(smallClass).classList.remove("hide");
+      document.querySelector(bigClass).classList.add("hide");
+      document.querySelector(".mobile-booking-div").classList.add("hide");
+      document.querySelector(".mobile-booking-div").classList.remove("show");
+      showDesFlag = false;
+    }
+  });
+});
+// smallDes.addEventListener("click", () => {
+//   if (!showDesFlag) {
+//     document.querySelector(".room-item-small").classList.add("hide");
+//     document.querySelector(".room-item-big").classList.remove("hide");
+//     document.querySelector(".mobile-booking-div").classList.remove("hide");
+//     document.querySelector(".mobile-booking-div").classList.add("show");
+//     showDesFlag = true;
+//   } else {
+//     document.querySelector(".room-item-small").classList.remove("hide");
+//     document.querySelector(".room-item-big").classList.add("hide");
+//     document.querySelector(".mobile-booking-div").classList.add("hide");
+//     document.querySelector(".mobile-booking-div").classList.remove("show");
+//     showDesFlag = false;
+//   }
+// });
+// console.log(document.querySelectorAll(".share-dropdown li"));
+// document
+//   .querySelectorAll(".share-dropdown li")
+//   .addEventListener("click", () => {
+//     document.querySelector(".share-dropdown").classList.remove("show");
+//     shareBtnFlag = false;
+//   });
+let hamburgerMenuFlag = false;
+document.querySelector("#menu").addEventListener("click", () => {
+  if (!hamburgerMenuFlag) {
+    document.querySelector(".mobile-menu").classList.remove("hide");
+    document.querySelector(".mobile-menu").classList.add("show-block");
+    document.querySelector("body").classList.add("no-overflow");
+    hamburgerMenuFlag = true;
+  } else {
+    document.querySelector(".mobile-menu").classList.add("hide");
+    document.querySelector(".mobile-menu").classList.remove("show-block");
+    document.querySelector("body").classList.remove("no-overflow");
+    hamburgerMenuFlag = false;
+  }
+});
+document.querySelector(".mobile-menu #close").addEventListener("click", () => {
+  document.querySelector(".mobile-menu").classList.add("hide");
+  document.querySelector(".mobile-menu").classList.remove("show-block");
+  document.querySelector("body").classList.remove("no-overflow");
+  hamburgerMenuFlag = false;
+});
 let currentTab = document.querySelectorAll(".currency");
-console.log(currentTab);
 let currencyDropDown = document.querySelector(".currency-dropdown");
 // console.log(currentTab);
 currentTab[1].addEventListener("mouseover", () => {
-  console.log("hi");
   currencyDropDown.classList.remove("hide");
   currencyDropDown.classList.add("show");
   document.querySelector(".main-header .container").classList.add("visible");
@@ -18,6 +168,7 @@ currencyDropDown.addEventListener("click", () => {
   currencyDropDown.classList.remove("show");
   document.querySelector(".main-header .container").classList.remove("visible");
 });
+
 let filterBtn = document.querySelector(".filters-btn");
 let arrow = document.querySelector(".filters-btn-arrow");
 let saveBtn = document.querySelector(".toggle-filter-options .btn-row .save");
@@ -31,7 +182,6 @@ filterBtn.addEventListener("click", () => {
     dropDown.classList.add("show");
     document.querySelector(".search-row .container").classList.add("visible");
     arrow.style.transform = "translateY(-50%) rotate(180deg)";
-    // arrow.style.top = "27%";
   } else {
     fitlerDropDownFlag = false;
     dropDown.classList.add("hide");
@@ -40,7 +190,6 @@ filterBtn.addEventListener("click", () => {
       .querySelector(".search-row .container")
       .classList.remove("visible");
     arrow.style.transform = "translateY(-50%) rotate(0deg)";
-    // arrow.style.top = "41%";
   }
 });
 saveBtn.addEventListener("click", () => {
@@ -155,28 +304,7 @@ document.querySelector(".close-mobile").addEventListener("click", () => {
   document.querySelector(".filters-mobile").classList.remove("show-block");
   document.querySelector(".mobile-footer").classList.remove("hide");
 });
-let hamburgerMenuFlag = false;
-document.querySelector("#menu").addEventListener("click", () => {
-  if (!hamburgerMenuFlag) {
-    document.querySelector(".mobile-menu").classList.remove("hide");
-    document.querySelector(".mobile-menu").classList.add("show-block");
-    document.querySelector("body").classList.add("no-overflow");
-    hamburgerMenuFlag = true;
-  } else {
-    document.querySelector(".mobile-menu").classList.add("hide");
-    document.querySelector(".mobile-menu").classList.remove("show-block");
-    document.querySelector("body").classList.remove("no-overflow");
-    hamburgerMenuFlag = false;
-  }
-});
-document.querySelector(".mobile-menu #close").addEventListener("click", () => {
-  document.querySelector(".mobile-menu").classList.add("hide");
-  document.querySelector(".mobile-menu").classList.remove("show-block");
-  document.querySelector("body").classList.remove("no-overflow");
-  hamburgerMenuFlag = false;
-});
 let navItems = document.querySelectorAll(".nav-item");
-console.log(navItems);
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", () => {
     document.querySelector(".mobile-menu").classList.add("hide");
