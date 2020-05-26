@@ -43,6 +43,7 @@ ul {
 }
 .container > .row {
   margin: 0px;
+  width: 100%;
 }
 .main-header .container,
 .search-row .container,
@@ -616,6 +617,375 @@ ul {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 10px;
+}
+
+/* Property Details Page  */
+.image-grid {
+  position: relative;
+}
+.image-grid .container {
+  max-width: 1370px;
+}
+.image-grid .container > .row {
+  margin-top: 45px;
+}
+.image-grid .container .see-all-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  width: 132px;
+  height: 36px;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+}
+.image-grid .container .col-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.image-grid .container .row.inner {
+  margin: 0px;
+}
+.image-grid .container .col-6.main img.big {
+  width: 100%;
+  height: auto;
+}
+.property-details-wrapper {
+  margin-top: 27px;
+}
+.property-details-wrapper .container {
+  max-width: 1370px;
+}
+.property-details-wrapper .container h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #242526;
+  float: left;
+  padding-right: 60px;
+}
+.property-details-wrapper .container .save-wishlist-btn,
+.property-details-wrapper .container .share-btn {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #242526;
+  height: 36px;
+  padding: 9px 15px 6px 6px;
+  cursor: pointer;
+  vertical-align: top;
+  border: 1px solid #b3b1b4;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.property-details-wrapper .container .share-btn {
+  margin-left: 20px;
+}
+.property-details-wrapper .container .save-wishlist-btn .wishlist-icon {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/fav.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 12px;
+  height: 24px;
+  vertical-align: top;
+  margin: -3px 4px 0 6px;
+}
+.property-details-wrapper .container .share-btn .share-icon {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/share_icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 13px;
+  height: 20px;
+  vertical-align: top;
+  margin: -2px 4px 0 6px;
+  background-size: 13px auto;
+}
+.property-details-wrapper .hotel-rating {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #574b90;
+}
+.property-details-wrapper .rating-stars {
+  background-image: url("https://www.cuddlynest.com/images/rating_stars/rating_star.svg");
+  vertical-align: top;
+  margin-top: 0;
+  background-position: top left;
+  background-repeat: repeat-x;
+  display: inline-block;
+  vertical-align: top;
+  height: 14px;
+  background-size: auto 14px;
+  width: 56px;
+  margin: 0;
+}
+.property-details-wrapper .inner-menu-wrapper {
+  border-bottom: medium none;
+  display: inline-block;
+  left: 0;
+  margin: 20px 0;
+  width: 100%;
+}
+.property-details-wrapper .inner-menu {
+  display: inline-flex;
+  padding-left: 0px;
+}
+.property-details-wrapper .inner-menu-item {
+  float: left;
+  margin: 0 18px 0 0;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #242526;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.property-details-wrapper .inner-menu-item.active {
+  text-decoration: none;
+  border-bottom: 2px solid #e56399;
+  font-weight: 500;
+  color: #242526;
+}
+.property-details-wrapper .search-row {
+  float: left;
+  width: 100%;
+  padding: 0;
+  border-top: 1px solid #dcdadc;
+  margin: 5px 0 0;
+  padding: 15px 0 10px;
+}
+.property-details-wrapper .search-row ul {
+  padding-left: 0px;
+  display: inline-flex;
+}
+.property-details-wrapper .search-row .date-input-item .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.property-details-wrapper .search-row .date-input-item .row .arrow {
+  background-image: url("https://www.cuddlynest.com/images/sv2_icons/cinout_arrow.svg");
+  background-size: 16px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 10px;
+  width: 14px;
+  margin-left: -15px;
+  margin-top: -4px;
+}
+.property-details-wrapper .search-row .date-input-item .col-sm-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.property-details-wrapper .search-row .date-input-item .col-sm-6 input {
+  border: none;
+  height: 36px;
+  padding: 2px 0 0 14px;
+  background: 0 0;
+  width: 100%;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 19px;
+  border: 1px solid #dcdadc;
+}
+.property-details-wrapper .search-row .date-input-item .col-sm-6 .date-in {
+  border-right: none;
+}
+.property-details-wrapper .search-row .date-input-item .col-sm-6 .date-out {
+  border-left: none;
+  margin-left: -1px;
+}
+.property-details-wrapper .search-row .guest-input-item {
+  width: 137px;
+  position: relative;
+  margin-left: 20px;
+}
+.property-details-wrapper .search-row .guest-input-item span {
+  position: absolute;
+  padding: 0 10px;
+  top: 44%;
+  transform: translateY(-50%);
+}
+.property-details-wrapper .search-row .guest-input-item span.minus-btn {
+  left: 1px;
+}
+.property-details-wrapper .search-row .guest-input-item span.plus-btn {
+  right: 1px;
+}
+.property-details-wrapper .search-row .guest-input-item .guests {
+  text-align: center;
+  border: none;
+  height: 36px;
+  background: 0 0;
+  width: 100%;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 19px;
+  border: 1px solid #dcdadc;
+}
+#select-room-div {
+  float: left;
+  padding: 5px 20px 5px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #dcdadc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  min-height: 65px;
+}
+#select-room-div .table1 td {
+  border: none !important;
+}
+#select-room-div table td {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 0px;
+  border-bottom: 1px solid #dcdadc;
+}
+#select-room-div table td h3 {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 43px;
+  color: #242526;
+}
+#select-room-div table td h3 sub {
+  font-size: 18px;
+  font-weight: 400;
+  bottom: 0;
+  color: #8d9294;
+}
+#select-room-div table td p.total {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #b3b1b4;
+}
+#select-room-div table td p.total .help-icon {
+  width: 16px;
+  margin-top: -3px;
+  margin-left: 10px;
+}
+#select-room-div table td a.book-room-btn {
+  background-color: #f96d9c;
+  background-image: none;
+  border: 1px solid #f96d9c;
+  margin: 0 auto;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  padding: 8px 16px;
+  margin-top: 20px;
+}
+#select-room-div table td ul {
+  padding-left: 0px;
+}
+#select-room-div table thead {
+  border-bottom: 1px solid #dcdadc;
+}
+#select-room-div .table thead th {
+  padding-left: 0px;
+}
+#select-room-div .table1 {
+  width: 320px !important;
+}
+#select-room-div .table1 td {
+  padding: 20px 0 15px;
+}
+#select-room-div .table1 p {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+#select-room-div .table1 p sup {
+  font-size: 10px;
+  top: -8px;
+}
+#select-room-div .table {
+  width: calc(100% - 320px);
+}
+#select-room-div .table1 .rooms {
+  width: 320px;
+}
+#select-room-div table .guests {
+  width: 170px;
+}
+#select-room-div table .amenities {
+  width: 340px;
+}
+#select-room-div table .policies {
+  width: 170px;
+}
+#select-room-div table .price {
+  width: 300px;
+}
+#select-room-div .show-more-less {
+  font-size: 18px;
+  line-height: 22px;
+  color: #242526;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 340px;
+  padding-bottom: 20px;
+}
+#select-room-div .show-more-less span.arrow {
+  background: url("https://www.cuddlynest.com/images/sv2_icons/arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 16px;
+  height: 22px;
+  display: inline-flex;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+#location-div {
+  float: left;
+  width: 100%;
+  margin: 42px 0 0;
+}
+#location-div > h3 {
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #242526;
+  width: 100%;
+}
+#location-div > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
 }
 /* Mobile Resonponsive */
 @media (min-width: 320px) and (max-width: 480px) {
