@@ -1,4 +1,9 @@
 // Property Details Page
+if (window.screen.width < 420) {
+  document.querySelector(".search-row").classList.add("mob");
+} else {
+  document.querySelector(".search-row").classList.remove("mob");
+}
 let seeAllBtn = document.querySelector(".see-all-btn");
 let seeAllCloseBtn = document.querySelector(".carousel-div .close");
 seeAllBtn.addEventListener("click", () => {
@@ -30,6 +35,40 @@ window.onscroll = function (e) {
     if (isInnerMenuSticky) {
       innerMenu.removeClass("sticky");
       isInnerMenuSticky = false;
+    }
+  }
+};
+
+let innerMenu1 = $(".search-row.mob");
+let innerMenuPosition1 = innerMenu1.position().top;
+let isInnerMenuSticky1 = false;
+let currentScroll1 = window.scrollY;
+console.log(currentScroll1);
+console.log("six", innerMenuPosition1);
+if (
+  currentScroll1 == innerMenuPosition1 ||
+  currentScroll1 > innerMenuPosition1
+) {
+  if (!isInnerMenuSticky1) {
+    innerMenu1.addClass("sticky");
+    isInnerMenuSticky1 = true;
+  }
+}
+window.onscroll = function (e) {
+  console.log(currentScroll1);
+  currentScroll1 = window.scrollY;
+  if (
+    currentScroll1 == innerMenuPosition1 ||
+    currentScroll1 > innerMenuPosition1
+  ) {
+    if (!isInnerMenuSticky1) {
+      innerMenu1.addClass("sticky");
+      isInnerMenuSticky1 = true;
+    }
+  } else {
+    if (isInnerMenuSticky1) {
+      innerMenu1.removeClass("sticky");
+      isInnerMenuSticky1 = false;
     }
   }
 };
