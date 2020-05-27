@@ -1224,6 +1224,47 @@ footer .copyright-div .float-right span {
   width: 500px;
   height: auto;
 }
+#location-div {
+  position: relative !important;
+}
+#location-div .searchbar {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  right: 50px;
+  transform: translateX(-50%);
+  width: max-content;
+  min-height: 30px;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+#location-div .searchbar .search-list {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  display: inline-flex;
+}
+#location-div .searchbar .search-item {
+  margin-right: 20px;
+}
+#location-div .searchbar .search-item label {
+  margin-bottom: 0px;
+}
+#location-div .searchbar .search-item span {
+  vertical-align: middle;
+  color: #b4b4b4;
+}
+#location-div .searchbar .search-item input {
+  vertical-align: middle;
+}
+#location-div .searchbar .search-item img {
+  width: 16px;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 @media (min-width: 700px) {
   .mobile {
     display: none;
@@ -1890,5 +1931,8 @@ footer .copyright-div .float-right span {
     width: 70px;
     background-size: 70px;
     margin-top: 10px !important;
+  }
+  #location-div .searchbar {
+    display: none;
   }
 }

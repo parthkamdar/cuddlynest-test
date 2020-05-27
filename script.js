@@ -43,8 +43,6 @@ let innerMenu1 = $(".search-row.mob");
 let innerMenuPosition1 = innerMenu1.position().top;
 let isInnerMenuSticky1 = false;
 let currentScroll1 = window.scrollY;
-console.log(currentScroll1);
-console.log("six", innerMenuPosition1);
 if (
   currentScroll1 == innerMenuPosition1 ||
   currentScroll1 > innerMenuPosition1
