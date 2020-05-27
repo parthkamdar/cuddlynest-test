@@ -1265,6 +1265,23 @@ footer .copyright-div .float-right span {
   margin-left: 5px;
   margin-right: 5px;
 }
+.report .report-icon {
+  background-image: url("https://www.cuddlynest.com/images/hpv2_homeicons/flag_v2.png?v=0.0");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 15px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.report {
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f47b70;
+  text-decoration: none;
+}
 @media (min-width: 700px) {
   .mobile {
     display: none;
@@ -1934,5 +1951,10 @@ footer .copyright-div .float-right span {
   }
   #location-div .searchbar {
     display: none;
+  }
+  .report {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
