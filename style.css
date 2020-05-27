@@ -1286,6 +1286,9 @@ footer .copyright-div .float-right span {
   .mobile {
     display: none;
   }
+  .inner-menu-wrapper-mobile {
+    display: none;
+  }
 }
 
 /* Mobile Resonponsive */
