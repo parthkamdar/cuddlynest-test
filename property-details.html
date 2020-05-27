@@ -1018,7 +1018,7 @@
       function initMap() {
         var locations = [["Morris Guest House", 40.851331, -73.907269]];
         map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 17,
+          zoom: 12,
           center: new google.maps.LatLng(40.851331, -73.907269),
           mapTypeId: google.maps.MapTypeId.ROADMAP,
         });
@@ -1041,7 +1041,7 @@
           if (checkbox.checked) {
             var request = {
               location: latlang,
-              radius: "500",
+              radius: "1000",
               type: [searchType],
             };
 
